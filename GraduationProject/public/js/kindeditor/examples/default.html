@@ -1,0 +1,44 @@
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>Jquery动态添加及删除页面节点</title> 
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script><!--引用jqurey库文件--> 
+<style> 
+.container{ width:1000px; margin:0 auto;} 
+.top{ height:25px; line-height:25px;} 
+.top select{ width:80px; height:22px; line-height:22px;} 
+.top input{ width:56px; height:22px;} 
+.add{ line-height:30px;} 
+li{ list-style:none;} 
+span{cursor:pointer;} 
+</style> 
+<script> 
+$(function(){
+    function add(){
+        var i=0;
+            
+        var v=$('.addpp div').length;
+        $('.btn_pop1').click(function(){
+            i++;
+            var str=$("<div class='a"+i+"'>aaaaaaaaaaaaa"+i+"</div>");
+            $('.addpp').append(str);
+            
+            
+        })
+        $('.btn_pop3').click(function(){
+        $(".addpp div[class^=a]:last").remove()
+            
+    })
+    }
+    add();
+})
+</script> 
+</head> 
+
+<body> 
+<div class="addpp"></div>
+<input type="button" value="添加" class="btn_pop1" />
+<input type="button" value="删除" class="btn_pop3" />
+</body> 
+</html>

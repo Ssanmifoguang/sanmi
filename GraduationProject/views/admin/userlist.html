@@ -1,0 +1,47 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>用户名</th>
+            <th>性别</th>
+            <th>审核情况</th>
+            <th>审核状态</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%users.map(function(user){%>
+        <tr>
+            <td><%=user.id%></td>
+            <td><%=user.username%></td>
+            <td>
+                <%if(user.sex == 1){%>
+                    男
+                <%}%>
+                <%if(user.sex == 0){%>
+                    女
+                <%}%>
+            </td>
+            <%if(user.ispass == null){%>
+                <td>
+                    <a href="#/user/pass/<%=user.id%>" type="button" class="pass">通过</a>/
+                    <a href="#/user/nopass/<%=user.id%>" type="button" class="nopass">不通过</a>
+                </td>
+            <%}%>
+            <%if(user.ispass == 0){%>
+                <td><span class="label label-danger">未通过</span></td>
+            <%}%>
+            <%if(user.ispass == 1){%>
+                <td><span class="label label-success">已通过</span></td>
+            <%}%>
+            <td>
+                <%if(user.ispass == null){%>
+                    <a type="button" href="#/user/show">未审核</a>
+                <%}%>
+                <%if(user.ispass == 0 || user.ispass){%>
+                    <a type="button" href="#/user/show">已审核</a>
+                <%}%>
+            </td>
+        </tr>
+        <%})%>
+    </tbody>
+</table>

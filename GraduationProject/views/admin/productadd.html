@@ -1,0 +1,209 @@
+<form novalidate="" role="form" class="form-horizontal productadd" enctype="multipart/form-data">
+    <div class="form-group message"></div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">商品名称（中文）：</label>
+        <div class="col-md-5">
+        <input type="text" required="" id="pnamec" class="form-control" name="pnamec">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">商品名称（繁体）：</label>
+        <div class="col-md-5">
+        <input type="text" required="" id="pnamef" class="form-control" name="pnamef">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">商品名称（英文）：</label>
+        <div class="col-md-5">
+        <input type="text" required="" id="pnamee" class="form-control" name="pnamee">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">商品名称（葡语）：</label>
+        <div class="col-md-5">
+        <input type="text" required="" id="pnamep" class="form-control" name="pnamep">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">品牌（中）：</label>
+        <div class="col-md-5">
+            <input type="text" required="" id="brandc" class="form-control" name="brandc">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">品牌（繁）：</label>
+        <div class="col-md-5">
+            <input type="text" required="" id="brandf" class="form-control" name="brandf">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">品牌（英）：</label>
+        <div class="col-md-5">
+            <input type="text" required="" id="brande" class="form-control" name="brande">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">品牌（葡）：</label>
+        <div class="col-md-5">
+            <input type="text" required="" id="brandp" class="form-control" name="brandp">
+        </div>
+    </div>
+    
+
+        <div class="form-group">
+        <label class="col-md-2 control-label">商品价格($)：</label>
+        <div class="col-md-5">
+        <input type="number" required="" placeholder="请输入价格($)" id="price" class="form-control" name="price">
+        </div>
+    </div>
+
+        <div class="form-group">
+        <label class="col-md-2 control-label">商品hs码：</label>
+        <div class="col-md-5">
+        <input type="number" required="" placeholder="hs码" id="hsnum" class="form-control" name="hsnum">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">分类（中）：</label>
+        <div class="col-md-3">
+            <select class="form-control tid">
+                <% types.map(item=>{ %>
+                    <option value="<%=item.id%>"><%=item.typenamec%></option>
+                <%});%>
+                
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">分类（繁）：</label>
+        <div class="col-md-3">
+            <select class="form-control tid">
+                <% types.map(item=>{ %>
+                    <option value="<%=item.id%>"><%=item.typenamef%></option>
+                <%});%>
+                
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">分类（英）：</label>
+        <div class="col-md-3">
+            <select class="form-control tid">
+                <% types.map(item=>{ %>
+                    <option value="<%=item.id%>"><%=item.typenamee%></option>
+                <%});%>
+                
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">分类（葡）：</label>
+        <div class="col-md-3">
+            <select class="form-control tid">
+                <% types.map(item=>{ %>
+                    <option value="<%=item.id%>"><%=item.typenamep%></option>
+                <%});%>
+                
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">制造商（中）：</label>
+        <div class="col-md-10">
+            <input type="text" required="" id="manufacturedc" class="form-control" name="manufacturedc">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">制造商（繁）：</label>
+        <div class="col-md-10">
+            <input type="text" required="" id="manufacturedf" class="form-control" name="manufacturedf">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">制造商（英）：</label>
+        <div class="col-md-10">
+            <input type="text" required="" id="manufacturede" class="form-control" name="manufacturede">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">制造商（葡）：</label>
+        <div class="col-md-10">
+            <input type="text" required="" id="manufacturedp" class="form-control" name="manufacturedp">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">生产地（中）：</label>
+        <div class="col-md-10">
+            <input type="text" required="" id="paddressc" class="form-control" name="paddressc">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">生产地（繁）：</label>
+        <div class="col-md-10">
+            <input type="text" required="" id="paddressf" class="form-control" name="paddressf">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">生产地（英）：</label>
+        <div class="col-md-10">
+            <input type="text" required="" id="paddresse" class="form-control" name="paddresse">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">生产地（葡）：</label>
+        <div class="col-md-10">
+            <input type="text" required="" id="paddressp" class="form-control" name="paddressp">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">产品介绍（中文）：</label>
+        <div class="col-md-10">
+            <textarea class="form-control" id="pintroductionc" rows="3"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">产品介绍（繁体）：</label>
+        <div class="col-md-10">
+            <textarea class="form-control" id="pintroductionf" rows="3"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">产品介绍（英语）：</label>
+        <div class="col-md-10">
+            <textarea class="form-control" id="pintroductione" rows="3"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">产品介绍（葡语）：</label>
+        <div class="col-md-10">
+            <textarea class="form-control" id="pintroductionp" rows="3"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">商品图片：</label>
+        <div class="col-md-10">
+            <input type="file" id="imgurl" class="form-control" name="imgurl">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button class="btn btn-info" type="submit">提交</button>
+        </div>
+    </div>
+</form>

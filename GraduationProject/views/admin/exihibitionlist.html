@@ -1,0 +1,26 @@
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <td style="width:10%">序号</td>
+            <td style="width:10%">会展名称</td>
+            <td style="width:20%">会展类型</td>
+            <td style="width:40%">会展时间</td>
+            <td style="width:20%">操作</td>
+        </tr>
+    </thead>
+    <tbody>
+        <%exihibitions.map(function(exihibition){%>
+        <tr>
+            <td><%=exihibition.id%></td>
+            <td><%=exihibition.exihibitionnamec%></td>
+            <td><%=exihibition.exihibitiontypec%></td>
+            <td><%=exihibition.time%></td>
+            <td>
+                <a class="elook" href="#/exihibition/show/<%=exihibition.id%>">查看</a>/
+                <a class="delete" data-id="<%=exihibition.id%>" href="#/exihibition/delete/<%=exihibition.id%>">删除</a>
+            </td>
+        </tr>
+        <%})%>
+    </tbody>
+</table>
+<a type="button" class="btn btn-primary btn-block" href="#/exihibition/add">添加</a>

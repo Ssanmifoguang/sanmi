@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>标题</th>
+            <th>时间</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <form id="laws_show">
+        <tbody>
+            <%lawss.map(function(laws){%>
+            <tr>
+                <td><%=laws.id%></td>
+                <td><%=laws.titlec%></td>
+                <td><%=laws.time%></td>
+                <td>
+                    <a class="show_laws" href="#/laws/show/<%=laws.id%>">查看</a>/
+                    <a class="delete_laws" data-id="<%=laws.id%>" href="#/laws/delete/<%=laws.id%>">删除</a>
+                </td>
+            </tr>
+            <%})%>
+        </tbody>
+    </form>
+</table>
+<a type="button" class="btn btn-primary btn-block" href="#/laws/add">添加</a>

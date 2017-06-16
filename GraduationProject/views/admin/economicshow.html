@@ -1,0 +1,49 @@
+<table class="table">
+    <%economics.map(function(economic){%>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-6">
+                <label>标题（简体）</label>
+                <input type="text" class="form-control" value="<%=economic.titlec%>">
+            </div>
+            <div class="col-xs-6">
+                <label>标题（繁体）</label>
+                <input type="text" class="form-control" value="<%=economic.titlef%>">
+            </div>
+            <div class="col-xs-6">
+                <label>标题（英文）</label>
+                <input type="text" class="form-control" value="<%=economic.titlee%>">
+            </div>
+            <div class="col-xs-6">
+                <label>标题（葡语）</label>
+                <input type="text" class="form-control" value="<%=economic.titlep%>">
+            </div>
+
+            <div class="col-xs-12">
+                <label>新闻内容（简体）</label>
+                <textarea class="form-control" rows="3"><%=economic.contentc%></textarea>
+            </div>
+
+            <div class="col-xs-12">
+                <label>新闻内容（繁体）</label>
+                <textarea class="form-control" rows="3"><%=economic.contentf%></textarea>
+            </div>
+
+            <div class="col-xs-12">
+                <label>新闻内容（英文）</label>
+                <textarea class="form-control" rows="3"><%=economic.contente%></textarea>
+            </div>
+
+            <div class="col-xs-12">
+                <label>新闻内容（葡语）</label>
+                <textarea class="form-control" rows="3"><%=economic.contentp%></textarea>
+            </div>
+
+            <div class="col-xs-6">
+                <label>时间</label>
+                <input type="text" class="form-control" value="<%=economic.time%>">
+            </div>
+        </div>
+    </div>
+    <%})%>
+</table>

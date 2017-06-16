@@ -1,0 +1,29 @@
+ <table class="table">
+    <%lawss.map(function(laws){%>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-6">
+                <label>标题（简体）</label>
+                <input type="text" class="form-control" value="<%=laws.titlec%>">
+            </div>
+            <div class="col-xs-6">
+                <label>标题（繁体）</label>
+                <input type="text" class="form-control" value="<%=laws.titlef%>">
+            </div>
+            <div class="col-xs-6">
+                <label>标题（英文）</label>
+                <input type="text" class="form-control" value="<%=laws.titlee%>">
+            </div>
+            <div class="col-xs-6">
+                <label>标题（葡语）</label>
+                <input type="text" class="form-control" value="<%=laws.titlep%>">
+            </div>
+
+            <div class="col-xs-6">
+                <label>时间</label>
+                <input type="text" class="form-control" value="<%=laws.time%>">
+            </div>
+        </div>
+    </div>
+    <%})%>
+ </table>

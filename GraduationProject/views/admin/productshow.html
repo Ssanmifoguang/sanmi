@@ -1,0 +1,149 @@
+<form novalidate="" role="form" class="form-horizontal" enctype="multipart/form-data">
+ <%products.map(function(products){%>
+    <div class="row"></div>
+        <div class="col-md-5 col-xs-5">
+            <label class="control-label">商品名称（中文）：</label>
+            <input type="text" class="form-control" value="<%=products.pnamec%>">
+        </div>
+        <div class="col-md-5 col-xs-5">
+            <label class="control-label">商品名称（繁体）：</label>
+            <input type="text" class="form-control" value="<%=products.pnamef%>">
+        </div>
+    </div>
+
+    <div class="row"></div>
+        <div class="col-md-5 col-xs-5">
+            <label class="control-label">商品名称（英文）：</label>
+            <input type="text" class="form-control" value="<%=products.pnamee%>">
+        </div>
+        <div class="col-md-5 col-xs-5">
+            <label class="control-label">商品名称（葡语）：</label>
+            <input type="text" class="form-control" value="<%=products.pnamep%>">
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-5 col-xs-5">
+            <label class="control-label">品牌（中）：</label>
+            <input type="text" class="form-control" value="<%=products.brandc%>">
+        </div>
+        <div class="col-md-5 col-xs-5">
+            <label class="control-label">品牌（繁）：</label>
+            <input type="text" class="form-control" value="<%=products.brandf%>">
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-5 col-xs-5">
+            <label class="control-label">品牌（英）：</label>
+            <input type="text" class="form-control" value="<%=products.brande%>">
+        </div>
+        <div class="col-md-5 col-xs-5">
+            <label class="control-label">品牌（葡）：</label>
+            <input type="text" class="form-control" value="<%=products.brandp%>">
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-5 col-xs-5">
+            <label class="control-label">商品价格($)：</label>
+            <input type="text" class="form-control" value="<%=products.price%>">
+        </div>
+        <div class="col-md-5 col-xs-5">
+            <label class="control-label">商品hs码：</label>
+            <input type="text" class="form-control" value="<%=products.hsnum%>">
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">制造商（中）：</label>
+            <input type="text" class="form-control" value="<%=products.manufacturedc%>">
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">制造商（繁）：</label>
+            <input type="text" class="form-control" value="<%=products.manufacturedf%>">
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">制造商（英）：</label>
+            <input type="text" class="form-control" value="<%=products.manufacturede%>">
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">制造商（葡）：</label>
+            <input type="text" class="form-control" value="<%=products.manufacturedp%>">
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">生产地（中）：</label>
+            <input type="text" class="form-control" value="<%=products.paddressc%>">
+        </div>
+    </div>
+
+     <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">生产地（繁）：</label>
+            <input type="text" class="form-control" value="<%=products.paddressf%>">
+        </div>
+    </div>
+
+     <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">生产地（英）：</label>
+            <input type="text" class="form-control" value="<%=products.paddresse%>">
+        </div>
+    </div>
+
+     <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">生产地（葡）：</label>
+            <input type="text" class="form-control" value="<%=products.paddressp%>">
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">产品介绍（中文）：</label>
+            <textarea class="form-control" rows="3"><%=products.pintroductionc%></textarea>
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">产品介绍（繁体）：</label>
+            <textarea class="form-control" rows="3"><%=products.pintroductionf%></textarea>
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">产品介绍（英语）：</label>
+             <textarea class="form-control" rows="3"><%=products.pintroductione%></textarea>
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">产品介绍（葡语）：</label>
+             <textarea class="form-control" rows="3"><%=products.pintroductionp%></textarea>
+        </div>
+    </div>
+
+    <div class="row message"></div>
+        <div class="col-md-10 col-xs-10">
+            <label class="control-label">商品图片：</label>
+             <img src="<%= "/uploads/".concat(products.imgurl)%>" style="width:200px">
+        </div>
+    </div>
+    <%})%>
+</form>

@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+        <tr>
+            <td>商品名称</td>
+            <td>商品价格</td>
+            <td>商品hs码</td>
+            <td>商品图片</td>
+            <td>操作</td>
+        </tr>
+    </thead>
+    <tbody>
+        <%products.map(function(product){%>
+        <tr>
+            <td><%=product.pnamec%></td>
+            <td><%=product.price%></td>
+            <td><%=product.hsnum%></td>
+            <td><img src="<%= "/uploads/".concat(product.imgurl)%>" alt="" style="width:50px"></td>
+            <td>
+                <a href="#/product/show/<%=product.id%>" class="show_id" data-id="<%=product.id%>">查看</a>/
+                <a href="#/product/delete/<%=product.id%>" class="delete" data-id="<%=product.id%>">删除</a>
+            </td>
+        </tr>
+        <%})%>
+    </tbody>
+</table>
+<a type="button" class="btn btn-primary btn-block" href="#/product/add">增加</a>

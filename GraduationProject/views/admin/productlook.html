@@ -1,0 +1,35 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品hs码</th>
+            <th>商品图片</th>
+            <th>审核状态</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%products.map(function(product){%>
+        <tr>
+            <td><%=product.id%></td>
+            <td><%=product.pnamec%></td>
+            <td><%=product.price%></td>
+            <td><%=product.hsnum%></td>
+            <td><img src="<%= "/uploads/".concat(product.imgurl)%>" alt="" style="height:30px"></td>
+            <td>
+                <%if(product.ispass == 0){%>
+                    <a class="pass" href="#/product/pass/<%=product.id%>" data-id="<%=product.id%>">通过审核</a>/
+                    <a class="nopass" href="#/product/nopass/<%=product.id%>" data-id="<%=product.id%>">不通过审核</a>
+                <%}%>
+                <%if(product.ispass == 1){%>
+                    <span class="label label-danger">未通过</span>
+                <%}%>
+                <%if(product.ispass == 2){%>
+                    <span class="label label-success">已通过</span>
+                <%}%>
+            </td>
+        </tr>
+        <%})%>
+    </tbody>
+</table>

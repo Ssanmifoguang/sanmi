@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>登录页面</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <link rel="bookmark" href="img/favicon.ico"/>
+    <!-- site css -->
+    <link rel="stylesheet" href="css/site.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/site.min.js"></script>
+    <style>
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #303641;
+        color: #C1C3C6
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form-signin" role="form" action="/login" method="POST" enctype="application/x-www-form-urlencoded">
+        <h2 class="form-signin-heading">中葡澳后台登录系统</h2>
+        <div class="message"></div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </div>
+            <input type="text" class="form-control" name="username" id="username" placeholder="请输入邮箱" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class=" glyphicon glyphicon-lock "></i>
+            </div>
+            <input type="password" class="form-control" name="password" id="password" placeholder="请输入密码" autocomplete="off" />
+          </div>
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" id="remember" value="remember-me"> &nbsp 记住我
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登 录</button>
+      </form>
+    
+    
+    
+  </body>
+  <script type="text/javascript" src="js/util.js"></script>
+  <script>
+    $(function(){
+      var $pwd  = $("#password");
+      var $name = $("#username");
+      var $message = $(".message");
+
+      var username = localStorage.getItem("username");
+      var password = localStorage.getItem("password");
+      if(username){
+          $name.val(username);
+          $pwd.val(password);
+          $("#remember").parent().addClass("checked");
+      }
+      $(".form-signin").submit(function(){
+        //表单验证
+        
+        if(!$name.isEmpty()){
+          $message.error(null,"邮箱不能为空");
+          $name.focus();
+          return false;
+        }
+        if(!$pwd.isEmpty()){
+          $message.error(null,"密码不能为空");
+          $pwd.focus();
+          return false;
+        }
+        if(!$name.isEmail()){
+          $message.warning(null,"邮箱格式不正确");
+          $name.focus().select();
+          return false;
+        }
+        //AJAX
+        //在jquery1.7以后，$.ajax使用了promise进行重写,$.ajax()返回一个promise 
+        $_ajax({
+          url:"/login",
+          data:{"username":$name.val(),"password":$pwd.val(),"remember":$("#remember").is(":checked")}
+        }).done(function(data){
+          if(data=="ok"){
+            if($("#remember").is(":checked")){
+              localStorage.setItem("username",$name.val());
+              localStorage.setItem("password",$pwd.val());
+            }else{
+              localStorage.removeItem("username");
+              localStorage.removeItem("password");
+            }
+              window.location.href = "/admin/index";
+          }else{
+            $message.error(null,"用户名或密码错误!");
+          }
+        });
+        return false;
+      });
+    });
+  </script>
+</html>

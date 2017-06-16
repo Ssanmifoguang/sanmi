@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>标题</th>
+            <th>开展时间</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%economics.map(function(economic){%>
+        <tr>
+            <td><%=economic.id%></td>
+            <td><%=economic.titlec%></td>
+            <td><%=economic.time%></td>
+            <td>
+                <a class="show_ecnomic" href="#/economic/show/<%=economic.id%>">查看</a>/
+                <a class="delete" data-id="<%=economic.id%>" href="#/economic/delete/<%=economic.id%>">删除</a>
+            </td>
+        </tr>
+        <%})%>
+    </tbody>
+</table>
+<a type="button" class="btn btn-primary btn-block" href="#/economic/add">添加</a>

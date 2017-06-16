@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+        <tr>
+            <td>序号</td>
+            <td>用户名</td>
+            <td>密码</td>
+            <td>超级管理员</td>
+            <td>操作</td>
+        </tr>
+    </thead>
+    <tbody>
+        <%admins.map(function(admin){%>
+        <tr>
+            <td><%=admin.id%></td>
+            <td><%=admin.name%></td>
+            <td><%=admin.password%></td>
+            <td><%=admin.isadmin?"是":"否"%></td>
+            <td><a class="delete" href="#/admin/delete/<%=admin.id%>" data-id="<%=admin.id%>">删除</a></td>
+        </tr>
+        <%})%>
+    </tbody>
+</table>
+<a type="button" class="btn btn-primary btn-block" href="#/admin/add">增加</a>

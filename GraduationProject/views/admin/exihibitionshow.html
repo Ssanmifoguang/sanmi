@@ -1,0 +1,105 @@
+ <table class="table">
+    <%exihibitions.map(function(exihibition){%>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-6">
+                <label>会展名称（简体）</label>
+                <input type="text" class="form-control" value="<%=exihibition.exihibitionnamec%>">
+            </div>
+            <div class="col-xs-6">
+                <label>会展名称（繁体）</label>
+                <input type="text" class="form-control" value="<%=exihibition.exihibitionnamef%>">
+            </div>
+            <div class="col-xs-6">
+                <label>会展名称（英文）</label>
+                <input type="text" class="form-control" value="<%=exihibition.exihibitionnamee%>">
+            </div>
+            <div class="col-xs-6">
+                <label>会展名称（葡语）</label>
+                <input type="text" class="form-control" value="<%=exihibition.exihibitionnamep%>">
+            </div>
+            <div class="col-xs-6">
+                <label>会展类型（简体）</label>
+                <input type="text" class="form-control" value="<%=exihibition.exihibitiontypec%>">
+            </div>
+            <div class="col-xs-6">
+                <label>会展类型（繁体）</label>
+                <input type="text" class="form-control" value="<%=exihibition.exihibitiontypef%>">
+            </div>
+            <div class="col-xs-6">
+                <label>会展类型（英文）</label>
+                <input type="text" class="form-control" value="<%=exihibition.exihibitiontypee%>">
+            </div>
+            <div class="col-xs-6">
+                <label>会展类型（葡语）</label>
+                <input type="text" class="form-control" value="<%=exihibition.exihibitiontypep%>">
+            </div>
+
+            <div class="col-xs-12">
+                <label>会展地址（简体）</label>
+                <textarea class="form-control" rows="3"><%=exihibition.addressc%></textarea>
+            </div>
+
+            <div class="col-xs-12">
+                <label>会展地址（繁体）</label>
+                <textarea class="form-control" rows="3"><%=exihibition.addressf%></textarea>
+            </div>
+
+            <div class="col-xs-12">
+                <label>会展地址（英文）</label>
+                <textarea class="form-control" rows="3"><%=exihibition.addresse%></textarea>
+            </div>
+
+            <div class="col-xs-12">
+                <label>会展地址（葡语）</label>
+                <textarea class="form-control" rows="3"><%=exihibition.addressp%></textarea>
+            </div>
+
+            <div class="col-xs-12">
+                <label>会展介绍（简体）</label>
+                <textarea class="form-control" rows="3"><%=exihibition.introducec%></textarea>
+            </div>
+
+            <div class="col-xs-12">
+                <label>会展介绍（繁体）</label>
+                <textarea class="form-control" rows="3"><%=exihibition.introducef%></textarea>
+            </div>
+
+            <div class="col-xs-12">
+                <label>会展介绍（英文）</label>
+                <textarea class="form-control" rows="3"><%=exihibition.introducee%></textarea>
+            </div>
+
+            <div class="col-xs-12">
+                <label>会展介绍（葡语）</label>
+                <textarea class="form-control" rows="3"><%=exihibition.introducep%></textarea>
+            </div>
+
+            <div class="col-xs-6">
+                <label>举办方（简体）</label>
+                <input type="text" class="form-control" value="<%=exihibition.organizerc%>">
+            </div>
+
+            <div class="col-xs-6">
+                <label>举办方（繁体）</label>
+                <input type="text" class="form-control" value="<%=exihibition.organizerf%>">
+            </div>
+
+            <div class="col-xs-6">
+                <label>举办方（英文）</label>
+                <input type="text" class="form-control" value="<%=exihibition.organizere%>">
+            </div>
+
+            <div class="col-xs-6">
+                <label>举办方（葡语）</label>
+                <input type="text" class="form-control" value="<%=exihibition.organizerp%>">
+            </div>
+
+            <div class="col-xs-6">
+                <label>会展时间</label>
+                <input type="text" class="form-control" value="<%=exihibition.time%>">
+            </div>
+        </div>
+    </div>
+    <%})%>
+ </table>

@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>分类名称（简体）</th>
+            <th>分类名称（繁体）</th>
+            <th>分类名称（英语）</th>
+            <th>分类名称（葡语）</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%types.map(function(type){%>
+        <tr>
+            <td><%=type.id%></td>
+            <td><%=type.typenamec%></td>
+            <td><%=type.typenamef%></td>
+            <td><%=type.typenamee%></td>
+            <td><%=type.typenamep%></td>
+        </tr>
+        <%})%>
+    </tbody>
+</table>
+<a type="button" class="btn btn-primary btn-block" href="#/type/add">增加</a>
